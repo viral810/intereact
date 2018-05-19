@@ -24,6 +24,10 @@ function render(element, parentDom) {
   const childElements = props.children || {};
   childElements.forEach(childElement => render(childElement, dom));
 
-  // Append to parent
-  parentDom.appendChild(dom);
+  // Append or replace dom
+  if (!parentDom.lastChild) {
+    parentDom.appendChild(dom);     
+  } else {
+    parentDom.replaceChild(dom, parentDom.lastChild);    
+  }
 }
