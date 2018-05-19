@@ -1,1 +1,3 @@
-# intereact
+# Intereact - Basic ReactJS implementation
+
+
